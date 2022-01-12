@@ -1,7 +1,5 @@
 package d11_01;
 
-import d11_01.Proizvod;
-
 public class Zadatak1 {
 
 	public static void main(String[] args) {
