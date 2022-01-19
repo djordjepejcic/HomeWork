@@ -64,7 +64,7 @@ public class Transakcija {
 //	○	ako je prenos sredstava veci od 4500, provizija je 1% 
 
 	private double provizija(double iznos) {
-		if (iznos < 4500) {
+		if (iznos <= 4500) {
 			return 45;
 		} else {
 			return iznos * 0.01;

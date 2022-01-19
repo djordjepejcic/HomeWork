@@ -43,7 +43,7 @@ public class Zadatak2 {
 		djordje.stampaj();
 		aleksandar.stampaj();
 
-		transakcija_1.izvrsiTransakciju(15000);
+		transakcija_1.izvrsiTransakciju(4500);
 		transakcija_1.stampaj();
 
 		djordje.stampaj();
