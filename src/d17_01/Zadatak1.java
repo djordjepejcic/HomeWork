@@ -62,7 +62,7 @@ public class Zadatak1 {
 		for (int i = 0; i < ZeleniKarton.size(); i++) {
 			ZeleniKarton.get(i).stampaj();
 		}
-
+		
 		double prosecnaOcena = 0;
 		for (int i = 0; i < ZeleniKarton.size(); i++) {
 			prosecnaOcena = prosecnaOcena + ZeleniKarton.get(i).getOcena();
