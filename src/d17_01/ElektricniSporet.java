@@ -104,35 +104,41 @@ public class ElektricniSporet {
 //	○	pozicija 4 je ringla dole desno
 
 	public void pojacaj(int pozicija) {
+		int brojacUpaljenihRingli = 0;
+
 		if (pozicija == 1) {
 			this.getGore_levo().pojacajRinglu();
+			brojacUpaljenihRingli++;
 		} else if (pozicija == 2) {
 			this.getGore_desno().pojacajRinglu();
+			brojacUpaljenihRingli++;
 		} else if (pozicija == 3) {
 			this.getDole_levo().pojacajRinglu();
+			brojacUpaljenihRingli++;
 		} else {
 			this.getDole_desno().pojacajRinglu();
+			brojacUpaljenihRingli++;
 		}
 
-		if (pozicija == 1 && !this.getGore_desno().daLiJeRinglaIskljucena()
+		if (pozicija == 1 && brojacUpaljenihRingli > maksUkljuceneRingle && !this.getGore_desno().daLiJeRinglaIskljucena()
 				&& !this.getDole_levo().daLiJeRinglaIskljucena() && !this.getDole_desno().daLiJeRinglaIskljucena()) {
 			this.getGore_levo().pojacajRinglu();
 			this.getGore_desno().iskljuciRinglu();
 			this.getDole_levo().iskljuciRinglu();
 			this.getDole_desno().iskljuciRinglu();
-		} else if (pozicija == 2 && !this.getGore_levo().daLiJeRinglaIskljucena()
+		} else if (pozicija == 2 && brojacUpaljenihRingli > maksUkljuceneRingle && !this.getGore_levo().daLiJeRinglaIskljucena()
 				&& !this.getDole_desno().daLiJeRinglaIskljucena() && !this.getDole_levo().daLiJeRinglaIskljucena()) {
 			this.getGore_desno().pojacajRinglu();
 			this.getGore_levo().iskljuciRinglu();
 			this.getDole_levo().iskljuciRinglu();
 			this.getDole_desno().iskljuciRinglu();
-		} else if (pozicija == 3 && !this.getGore_desno().daLiJeRinglaIskljucena()
+		} else if (pozicija == 3 && brojacUpaljenihRingli > maksUkljuceneRingle && !this.getGore_desno().daLiJeRinglaIskljucena()
 				&& !this.getGore_levo().daLiJeRinglaIskljucena() && !this.getDole_desno().daLiJeRinglaIskljucena()) {
 			this.getDole_levo().pojacajRinglu();
 			this.getGore_desno().iskljuciRinglu();
 			this.getGore_levo().iskljuciRinglu();
 			this.getDole_desno().iskljuciRinglu();
-		} else if (pozicija == 4 && !this.getGore_desno().daLiJeRinglaIskljucena()
+		} else if (pozicija == 4 && brojacUpaljenihRingli > maksUkljuceneRingle && !this.getGore_desno().daLiJeRinglaIskljucena()
 				&& !this.getGore_levo().daLiJeRinglaIskljucena() && !this.getDole_levo().daLiJeRinglaIskljucena()) {
 			this.getDole_desno().pojacajRinglu();
 			this.getGore_desno().iskljuciRinglu();
