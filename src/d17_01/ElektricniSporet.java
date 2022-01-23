@@ -159,7 +159,6 @@ public class ElektricniSporet {
 	public void iskljuci(int pozicija) {
 		if (pozicija == 1) {
 			this.getGore_levo().iskljuciRinglu();
-			;
 		} else if (pozicija == 2) {
 			this.getGore_desno().iskljuciRinglu();
 		} else if (pozicija == 3) {
